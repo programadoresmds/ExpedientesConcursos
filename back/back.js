@@ -10,7 +10,8 @@ var csv = require("fast-csv");
 
 var ObjectId = mongodb.ObjectID;
 
-var uri_mongo = 'mongodb://127.0.0.1/ExpedientesConcurso';
+//var uri_mongo = 'mongodb://127.0.0.1/ExpedientesConcurso';
+var uri_mongo = 'mongodb://admin:haciendo@ds033599.mongolab.com:33599/sime-backend';
 var app = express();
 
 app.use(serveStatic('../front', {'index': ['RecepcionYFoliado.html']}))
@@ -25,14 +26,14 @@ mongodb.MongoClient.connect(uri_mongo, function(err, db) {
 	app.get('/getPostulantePorDni/:dni', function(request, response){
 		var dni = request.params.dni.toString();
 		
-		db.collection('postulantes').findOne({"dni": dni}, function(err, postulante){		
+		db.collection('postulantes').findOne({"dni": dni}, function(err, postulante){
 			if(postulante == null) {
-				response.send(JSON.stringify({encontrado:false}));
+				response.send(JSON.stringify({noEncontrado:true}));
 				return;
-			}			
+			}
 			response.send(JSON.stringify(postulante));
-		});	
-	});	
+		});
+	});
 	
 	
 	app.get('/getPerfilPorCodigo/:codigo', function(request, response){

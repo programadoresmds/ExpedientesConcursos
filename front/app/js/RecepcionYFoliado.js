@@ -17,6 +17,11 @@ $(document).ready(function(){
 		$("#panel_perfil").hide();
 		$("#contenedor_resultado_busqueda").hide();
 		getPostulantePorDNI($("#txtBuscador").val(), function(postulante){
+            if(postulante.noEncontrado) {
+                alertify.error("postulante no encontrado");
+                return;
+            }
+            
 			if(postulante.dni){
 				$("#contenedor_resultado_busqueda").show();
 				$("#nombre_postulante").text(postulante.apellido + ", " + postulante.nombre);
@@ -126,7 +131,7 @@ $(document).ready(function(){
 			type: "GET",
 			async: true,
 			success: function (respuestaJson) {
-				var postulante = JSON.parse(respuestaJson);	
+				var postulante = JSON.parse(respuestaJson);	                
 				callback(postulante);
 			},
 			error: function (XMLHttpRequest, textStatus, errorThrown) {
