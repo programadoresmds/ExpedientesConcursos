@@ -1,0 +1,224 @@
+#contenedor_resultado_busqueda {
+	position: absolute; 
+	display: none;
+	top: 55px;
+  	bottom: 5px;
+	left: 5px;
+	right: 5px;
+}
+
+.documento {
+	height: 40px;
+  	border: 1px solid;
+  	border-radius: 5px;
+  	margin-bottom: 5px;
+	position: relative;
+}
+
+#plantillas {
+	display: none;
+}
+
+.datos_postulante {
+	padding: 10px 0px 10px 0px;
+	height: 55px;
+	position: absolute;
+	top: 5px;
+	left: 16px;
+	right: 0px;
+}
+
+#nombre_postulante {
+	font-size: 28px;
+  	font-weight: bold;
+	display: inline-block;
+}
+
+#dni_postulante {
+	font-size: 20px;
+  	display: inline-block;
+  	margin-left: 15px;
+}
+
+#perfiles_concursados {
+  	position: absolute;
+	left: 22px;
+	top: 60px;
+	bottom: 10px;
+	width: 250px;
+	/*background-color: rgb(231, 223, 223);*/
+	border: 1px solid #e5e5e5;/*FC*/
+	background: -webkit-linear-gradient(top, #FFFFFF 0%,#EFF0F5 100%);/*FC*/
+}
+
+#panel_perfil {
+  	position: absolute;
+	right: 10px;
+	top: 60px;
+	left: 325px;
+	bottom: 10px;
+	/*background-color: rgb(231, 223, 223);*/
+	border: 1px solid #e5e5e5; /*FC*/
+	background: -webkit-linear-gradient(top, #FFFFFF 0%,#EFF0F5 100%);/*FC*/
+}
+
+#contenedor_perfiles, 
+#contenedor_documentos{
+	position: absolute;
+	top: 50px;
+	bottom: 5px;
+	left: -15px;
+	right: 0px;
+	overflow: auto;
+	-moz-transition: bottom 0.5s;
+  	-webkit-transition: bottom 0.5s;
+  	-o-transition: bottom 0.5s;
+  	transition: bottom 0.5s;
+}
+
+#contenedor_documentos{
+	bottom: 45px;
+}
+
+#titulo_perfiles,
+#titulo_documentos
+{
+	font-weight: bold;
+	font-size: 20px;
+	padding: 10px;
+	color: rgb(105, 105, 105);/*FC*/
+	/*color: rgb(144, 127, 127);*/
+}
+
+.perfil,
+.documento{
+	height: 80px;
+	margin-bottom: 5px;
+	border-radius: 2px;
+	/*background-color: rgb(101, 216, 142);*/
+	padding: 9px;
+	font-weight: bold;
+	cursor: pointer;
+	color: white;
+	position: relative;
+	background-color: #0088cc;/*FC*/
+}
+
+.documento{
+	height: 40px;
+	width: 96%;/*fc*/
+}
+
+.perfil.active{
+	background-color: rgb(55, 86, 207);/* rgb(242, 241, 135);*/
+}
+
+.perfil:hover,
+.documento:hover{
+	background-color: #0E7EB6;/* rgb(111, 237, 156);*/
+}
+
+.perfil.active:hover{
+	background-color: #0E7EB6; /*rgb(250, 249, 145);*/
+}
+
+.perfil .nombre_perfil,
+.documento #nombre_documento{
+	margin-left: 26px;
+  	margin-bottom: 5px;
+  	/*color: rgb(144, 127, 127);*/
+	color: white;
+  	font-weight: bold;
+	cursor: pointer;
+}
+
+.documento #cantidad_fojas {
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	border: 0px solid;
+	width: 100px;
+	padding: 5px;
+	background-color: rgb(255, 249, 187);
+	color: black;
+}
+
+.documento.presentado #cantidad_fojas{
+	background-color: white !important;
+}
+
+
+.documento #salioDeSobre{
+  display: inline-block;
+  position: absolute;
+  right: -3%;
+  top: 0px;
+  bottom: 0px;
+  width: 18px;
+  height: 18px;
+}
+
+
+#btn_guardar {
+  	position: absolute;
+  	right: 5px;
+  	bottom: 5px;
+}
+
+#titulo_fojas {
+  	display: inline-block;
+  	position: absolute;
+  	top: 25px;
+  	/*right: 37px;*/
+	right: 9%;
+  	font-size: 18px;
+	font-weight: bold;
+	color: rgb(105, 105, 105);
+	/*color: rgb(144, 127, 127);*/
+}
+
+#titulo_sobre {
+  	display: inline-block;
+  	position: absolute;
+  	top: 25px;
+  	/*right: 37px;*/
+	right: 1%;
+  	font-size: 18px;
+	font-weight: bold;
+	color: rgb(105, 105, 105);
+	/*color: rgb(144, 127, 127);*/
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    overflow: visible;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .2);
+    min-height: 25px;
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1),inset 0 -1px 0 rgba(0, 0, 0, .07);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, .3);
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: #dddddd;
+    border: solid transparent;
+}
+::-webkit-scrollbar-track:hover {
+    background-color: #cccccc;
+}
+ 
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+::-webkit-scrollbar-button {
+    height: 0px;
+    width: 0px;
+}

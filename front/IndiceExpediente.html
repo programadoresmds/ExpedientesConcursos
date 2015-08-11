@@ -1,0 +1,59 @@
+<html>
+    <head>
+		<meta charset="UTF-8">
+        <title>Impresion de Expediente</title>
+		
+		<!-- Estilos -->
+		<link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="./lib/alertify/css/alertify.min.css" rel="stylesheet">
+		<link href="./app/css/FormIndice.css" rel="stylesheet">
+
+		<!-- Scripts -->
+		<script src="./lib/alertify/alertify.js"></script>
+		<script src="./lib/jquery.min.js"></script>
+		<script src="./lib/underscore-min.js"></script>
+		<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+		
+		<script src="./app/js/Indice.js"></script>
+      
+    </head>
+    <body>
+		<!--<input class="btn btn-primary btn-default" type="button" target="_blank" value="Imprimir" id="boton_imprimir" />-->
+        <div class="contenedor">
+            <h3 style="text-align:center;" id="numero_expediente"></h3>   
+			<br />
+			<h4 style="text-align:center;">Documentación individual para la designación de postulantes </h4>
+				<!--<span class="col1">DNI</span>
+				<span class="col2">NOMBRE</span>
+				<span class="col3">DOCUMENTO</span>
+				<span class="col4">FOLIO</span> -->
+				<br />
+			<div id="contenedor_indice"></div>
+			<div id="plantillas">
+				<div class="contenedor_perfil">
+					<div class="nombre_perfil_indice" ></div>
+					<div class="detalle_del_perfil_indice" ></div>
+				</div>
+			
+				<div class="identificacion" class="identificacion">
+					<br />
+					<div id="col3" class="col3"></div>
+					<div id="col4" class="col4d"></div> 
+					<div id="col4" class="col4h"></div> 
+				</div>
+				<br />
+				<div class="indice">
+					<!--<span id="dni"></span>
+					<span id="nombre"></span>-->
+					<span id="documento"></span>
+					
+					<span class="numero_folioH"></span> 
+					<span class="numero_folioD"></span> 
+					<span style="clear:both;"></span>
+					<br />
+				</div>
+			</div>	
+		
+        </div>
+    </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>Concurso - Creación de expedientes</title>
+
+		<!-- Estilos -->
+		<link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="./lib/alertify/css/alertify.min.css" rel="stylesheet">
+		<link href="./app/css/FormExpedientes.css" rel="stylesheet">
+
+		<!-- Scripts -->
+		<script src="./lib/alertify/alertify.js"></script>
+		<script src="./lib/jquery.min.js"></script>
+		<script src="./lib/underscore-min.js"></script>
+		<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+		
+		<script src="./app/js/Expedientes.js"></script>
+	</head>
+  	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container">
+			<div class="navbar-header">
+			  <a class="navbar-brand">Concurso - Creación de expedientes</a>
+			</div>
+		  </div>
+		</nav>
+
+		<div id="contenedor_principal">
+			<div id="lista_expedientes">
+				<div id="titulo_expedientes">Expedientes</div>
+				<div id="contenedor_expedientes">
+					
+				</div>
+				<div id="panel_agregar_expediente">
+					<input id="numero_expediente_agregar" type="text" placeholder="numero de expediente"/>
+					<input id="boton_agregar_expediente" type="button" class="btn btn-default" value="Agregar"/>
+				</div>
+				<div class="btn btn-primary btn-default" id="boton_abrir_panel_agregar_expediente"> Agregar Expediente
+					<div id="boton_cerrar_panel_agregar_expediente" class="glyphicon glyphicon-remove" aria-hidden="true"></div>
+				</div>
+			</div>
+			<div id="panel_expediente">
+				<div id="titulo_expediente"> </div>
+				<div id="label_postulantes_incluidos">Postulantes incluidos en el expediente:</div>
+				<div class="btn btn-primary btn-default" id="boton_imprimir"> imprimir </div>
+				<br />
+				<div class="documento presentado">
+					<div id="descripcion_fojas">Ingrese la última foja de la documentación fija del expediente: <input style="width:50px;" id="cantidad_fojas" type="text" placeholder="Fojas"></div>
+					
+				</div>
+
+				<br />
+				<div id="contenedor_postulantes">
+				</div>
+				<div id="panel_agregar_postulantes">
+					<select id="selector_de_perfiles"> 				
+					</select>
+					<div id="contenedor_postulantes_de_un_perfil">
+					</div>
+				</div>
+				<div class="btn btn-primary btn-default" id="boton_abrir_panel_agregar_postulantes"> Agregar Postulantes
+					<div  id="boton_cerrar_panel_agregar_postulantes" class="glyphicon glyphicon-remove" aria-hidden="true"></div>
+				</div>
+			</div>
+				
+		</div><!-- /.container -->
+
+		<div id="plantillas">
+			<div class="expediente_en_lista">
+			  	<div id="numero_expediente" ></div>
+			</div>
+			<div class="postulantes_de_un_perfil">
+			  	<div class="nombre_perfil" ></div>
+				<div class="contenedor_postulantes">	
+				</div>
+			</div>
+			<div class="postulante_en_lista_de_incluidos">
+			  	<div class="nombre" ></div>
+				<button type="button" class="boton_quitar btn btn-default btn-sm">
+				  <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+				</button>
+			</div>		
+			<div class="postulante_en_lista_de_no_incluidos">
+			  	<div class="nombre" ></div>
+				<button type="button" class="boton_incluir_postulante btn btn-default btn-sm">
+				  	<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+				</button>
+				<span class="leyenda_ya_incluido"></span>
+			</div>	
+		</div>
+	</body>
+</html>

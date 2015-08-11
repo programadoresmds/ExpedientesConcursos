@@ -1,0 +1,88 @@
+#plantillas {
+	display: none;
+}
+
+#contenedor_principal {
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+#boton_imprimir{
+	bottom: auto;
+	top: 10px;
+}
+
+.contenedor {
+	position: absolute;
+	/*nos posicionamos en el centro del navegador*/
+	left:50%;
+	width:95%;
+	margin:40px;
+	/*indicamos que el margen izquierdo, es la mitad de la anchura*/
+	margin-left:-47%;
+	/*determinamos una altura*/
+	border:1px solid #808080;
+	padding:5px;
+	background: -webkit-linear-gradient(top, #FFFFFF 0%,#EFF0F5 100%);
+	font-size:12px;
+}
+
+.col1, .col2, .col3, .col4d, .col4h, .col5, .col6, .col7 {
+	font-weight:bold;
+	font-size:14px;
+}
+
+#dni, #nombre, #documento, .col1, .col2, .col3, .col5, .col6  {
+	float:left;
+}
+#dni, .col1, .col5 {
+	width:12%;
+}
+#nombre, .col2, .col6 {
+	width:25%;
+}
+#documento, col3,  {
+	width:80%;
+}
+
+.col4d, .col4h, .col7 {
+	float:right;
+	width:8%;	
+	text-align:center;
+}
+
+.numero_folioD, .numero_folioH {
+	float:right;
+	width:8%;	
+	text-align:center;
+}
+
+.indice {
+	width:100%;
+	display: inline-block;
+	border-bottom: 1px dotted;
+}
+
+.identificacion {
+	font-size:15px;
+	font-weight:bold;
+}
+
+.nombre_perfil_indice {
+	font-size:16px;
+	font-weight:bold;
+}
+
+.detalle_del_perfil_indice {
+	font-size:14px;
+	font-weight:bold;
+}
+
+.contenedor_perfil {
+	background-color: #CBCBCB;
+	color: rgb(0, 0, 0);
+	border: 1px solid;
+}

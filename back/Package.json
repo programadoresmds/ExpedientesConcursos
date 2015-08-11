@@ -1,0 +1,12 @@
+{
+	"name": "concursos-backend",
+	"version": "0.0.1",
+	"dependencies": {
+		"express": "*",
+		"mongodb": "*",
+		"body-parser": "*",
+		"fast-csv": "*",
+		"serve-static": "*",
+		"google-spreadsheet": "*"
+	}
+}

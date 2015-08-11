@@ -1,0 +1,307 @@
+#plantillas {
+	display: none;
+}
+
+#contenedor_principal {
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+#lista_expedientes {
+	position: absolute;
+	left: 22px;
+	top: 10px;
+	bottom: 10px;
+	width: 250px;
+	background: -webkit-linear-gradient(top, #FFFFFF 0%,#EFF0F5 100%);
+	/*background-color: rgb(231, 223, 223);*/
+}
+
+#panel_expediente {
+	position: absolute;
+	right: 0px;
+	left: 300px;
+	top: 10px;
+	bottom: 10px;
+	background: -webkit-linear-gradient(top, #FFFFFF 0%,#EFF0F5 100%);
+	/*background-color: rgb(231, 223, 223);*/
+	right: 20px;	
+	display: none;
+}
+
+#titulo_expedientes {
+	font-weight: bold;
+	font-size: 20px;
+	padding: 10px;
+	color: rgb(144, 127, 127);
+}
+
+#contenedor_expedientes {
+	position: absolute;
+	top: 50px;
+	bottom: 60px;
+	left: -15px;
+	right: 0px;
+	overflow: auto;
+	-moz-transition: bottom 0.5s;
+  	-webkit-transition: bottom 0.5s;
+  	-o-transition: bottom 0.5s;
+  	transition: bottom 0.5s;
+}
+
+.modo_agregar_expediente #contenedor_expedientes{
+	bottom:150px;
+}
+
+#numero_expediente_agregar {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 95%;
+	height: 32px;
+	padding: 5px;
+}
+
+#boton_agregar_expediente {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+
+
+.expediente_en_lista, 
+.postulante_en_lista_de_incluidos,
+.postulante_en_lista_de_no_incluidos{
+	height: 40px;
+	margin-bottom: 5px;
+	border-radius: 2px;
+	background-color: #0088cc;
+	/*background-color: rgb(101, 216, 142);*/
+	padding: 9px;
+	font-weight: bold;
+	cursor: pointer;
+	color: white;
+	position: relative;
+}
+.expediente_en_lista.active,
+.expediente_en_lista.active:hover{
+	background-color: rgb(55, 86, 207);
+	/*background-color: rgb(242, 241, 135);*/
+}
+
+.expediente_en_lista:hover,
+.postulante_en_lista_de_incluidos:hover,
+.postulante_en_lista_de_no_incluidos:hover{
+	background-color: #0E7EB6;
+	/*background-color: rgb(111, 237, 156);*/
+}
+
+.postulante_en_lista_de_incluidos .boton_quitar,
+.postulante_en_lista_de_no_incluidos .boton_incluir_postulante{
+  	position: absolute;
+  	right: 5px;
+  	top: 5px;
+	background-color: rgb(247, 228, 133);
+}
+
+.postulantes_de_un_perfil .nombre_perfil {
+	margin-left: 26px;
+  	margin-bottom: 5px;
+  	color: rgb(144, 127, 127);
+  	font-weight: bold;
+}
+
+.postulante_en_lista_de_no_incluidos.incluido_en_expediente {
+	background-color: gray;
+}
+
+.postulante_en_lista_de_no_incluidos.incluido_en_expediente  .boton_incluir_postulante{
+	display: none;
+}
+
+.postulante_en_lista_de_no_incluidos .leyenda_ya_incluido {
+	font-size: 12px;
+	visibility: hidden;
+	position: absolute;
+	right: 10px;
+	top: 12px;
+}
+
+.postulante_en_lista_de_no_incluidos.incluido_en_expediente .leyenda_ya_incluido{
+	visibility: visible;
+}
+
+#titulo_expediente {
+	font-weight: bold;
+	font-size: 20px;
+	padding: 10px;
+	color: rgb(144, 127, 127);
+}
+
+#label_postulantes_incluidos {
+	margin-left: 11px;
+	margin-top: -10px;
+	color: rgb(144, 127, 127);
+}
+
+#contenedor_postulantes {
+	position: absolute;
+	top: 120px;
+	bottom: 60px;
+	left: -15px;
+	right: 0px;
+	overflow: auto;
+	-moz-transition: bottom 0.5s;
+  	-webkit-transition: bottom 0.5s;
+  	-o-transition: bottom 0.5s;
+  	transition: bottom 0.5s;
+}
+
+.modo_agregar_postulantes #contenedor_postulantes {
+	bottom: 50%;
+}
+
+
+#panel_agregar_postulantes,
+#panel_agregar_expediente{
+	position: absolute;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+	height: 0px;
+	overflow: hidden;
+	-moz-transition: all 0.5s;
+  	-webkit-transition: all 0.5s;
+  	-o-transition: all 0.5s;
+  	transition: all 0.5s;
+}
+
+.modo_agregar_expediente #panel_agregar_expediente{
+	height: 100px;
+}
+
+.modo_agregar_postulantes #panel_agregar_postulantes {
+	height: 50%;
+}
+
+#boton_abrir_panel_agregar_postulantes,
+#boton_abrir_panel_agregar_expediente,
+#boton_imprimir{
+	position: absolute;
+	right: -10px;
+	bottom: 10px;
+	width: 165px;
+	height: 40px;
+	/*background-color: rgb(178, 205, 96);*/
+	padding: 10px;
+	font-weight: bold;
+	color: white;
+	cursor: pointer;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	z-index: 1000;
+}
+
+#boton_imprimir{
+	bottom: auto;
+	top: 10px;
+}
+
+#boton_abrir_panel_agregar_postulantes:hover,
+#boton_abrir_panel_agregar_expediente:hover,
+#boton_imprimir:hover{
+	/*background-color: rgb(215, 200, 99);*/
+}
+
+.modo_agregar_postulantes #boton_abrir_panel_agregar_postulantes{
+	right: -10px;
+	width: 102%;
+	bottom: auto;
+	top: 50%;
+	/*background-color: rgb(200, 200, 200);*/
+}
+
+.modo_agregar_expediente #boton_abrir_panel_agregar_expediente{
+	right: -10px;
+	width: 108%;
+	bottom: 100px;
+	/*background-color: rgb(200, 200, 200);*/
+}
+
+#boton_cerrar_panel_agregar_postulantes,
+#boton_cerrar_panel_agregar_expediente{	
+	position: absolute;
+	right: 7px;
+	top: 7px;
+	visibility: hidden;
+	border-radius: 50%;
+	height: 25px;
+	width: 25px;
+	padding: 5px;
+}
+
+#boton_cerrar_panel_agregar_postulantes:hover,
+#boton_cerrar_panel_agregar_expediente:hover{	
+	/*background-color: gray;*/
+}
+
+.modo_agregar_postulantes #boton_cerrar_panel_agregar_postulantes,
+.modo_agregar_expediente #boton_cerrar_panel_agregar_expediente{
+	visibility: visible;
+}
+
+#selector_de_perfiles {
+	position: absolute;
+	top: 45px;
+	left: 5px;
+	right: 10px;
+	width: 99%;
+	height: 27px;
+}
+
+#contenedor_postulantes_de_un_perfil {
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	right: 5px;
+	top: 77px;
+	overflow: auto;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    overflow: visible;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .2);
+    min-height: 25px;
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1),inset 0 -1px 0 rgba(0, 0, 0, .07);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, .3);
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: #dddddd;
+    border: solid transparent;
+}
+::-webkit-scrollbar-track:hover {
+    background-color: #cccccc;
+}
+ 
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+::-webkit-scrollbar-button {
+    height: 0px;
+    width: 0px;
+}

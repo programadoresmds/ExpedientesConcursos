@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<!-- Estilos -->
+		<link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="./lib/alertify/css/alertify.min.css" rel="stylesheet">
+		<link href="./app/css/FormRecepcionYFoliado.css" rel="stylesheet">
+
+		<!-- Scripts -->
+		<script src="./lib/alertify/alertify.js"></script>
+		<script src="./lib/jquery.min.js"></script>
+		<script src="./lib/underscore-min.js"></script>
+		<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+		
+		<script src="./app/js/RecepcionYFoliado.js"></script>
+		
+		<title>Concurso - Etapa Entrega Documentacion</title>
+  	</head>
+  	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container">
+			<div class="navbar-header">
+			  <a class="navbar-brand">Concurso - Etapa Entrega Documentacion</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+			  <form class="navbar-form navbar-right" style=" margin-right: -95px;">
+				 <div class="col-lg-10">
+					<div class="input-group">
+					  <input type="text" class="form-control" placeholder="Documento..." id="txtBuscador">
+					  <span class="input-group-btn">
+						<button class="btn btn-default" type="button" id="btn_buscar">Buscar</button>
+					  </span>
+					</div><!-- /input-group -->
+				  </div><!-- /.col-lg-6 -->
+			  </form>
+			</div><!--/.navbar-collapse -->
+		  </div>
+		</nav>
+
+		<div id="contenedor_resultado_busqueda">
+			<div class="datos_postulante">
+				<div id="nombre_postulante"></div>
+				<div id="dni_postulante"></div>
+			</div>
+			<div id="perfiles_concursados">
+				<div id="titulo_perfiles"> Perfiles concursados</div>
+				<div id="contenedor_perfiles">
+					
+				</div>
+			</div>
+			<div id="panel_perfil">
+				<div id="titulo_documentos"> Documentación requerida</div>
+				<div id="titulo_fojas"> # Fojas</div>
+				<div id="titulo_sobre"><img width="25px" height="25px" src="app/css/icon_sobre.png" alt="sobre" /></div>
+				<div id="contenedor_documentos">
+				</div>
+				<button id="btn_guardar" class="btn btn-primary btn-default">Guardar</button>
+			</div>
+				
+		</div><!-- /.container -->
+
+		<div id="plantillas">
+			<div class="documento">
+			  	<div id="nombre_documento" ></div>
+			  	<input id="cantidad_fojas" type="text" placeholder="Fojas" />
+				<input id="salioDeSobre" type="checkbox"/>
+			</div>
+			
+			<div class="perfil">
+				<label class="nombre_perfil"></label>
+			</div>
+		</div>
+	</body>
+</html>
